@@ -16,7 +16,7 @@ Add the following code to your file:
 ```python
 from architecture import Architecture
 
-a = Architecture().draw()
+Architecture().draw()
 ```
 
 You can modify the following arguments to the architecture of the network:
