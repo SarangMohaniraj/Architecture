@@ -1,6 +1,9 @@
 # Architecture
 Create a drawing of a neural network with any shape
 
+<div align="center"><img height="400" src="images/example.png" alt="Example">
+</div>
+
 ## Getting Started
 
 ```batch

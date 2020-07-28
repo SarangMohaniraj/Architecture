@@ -12,8 +12,8 @@ class Architecture:
     self.horizontal_scale = 1
 
     # self.distance_between_layers = round(self.get_distance_between_layers()+1)
-    
-    
+
+
     # self.radius_neuron = plt.figure()
     plt.xkcd() if xkcd else None
   """
@@ -28,17 +28,17 @@ class Architecture:
     for x in range(len(self.shape)):
       # each layer has to have a different margin from bottom
       margin = (max(self.shape)-self.shape[x])*0.5 #may need to fix this for smaller sizes(radius)
-      
+
       for y in range(self.shape[x]):
         circle = plt.Circle((x*self.horizontal_scale, y+margin), radius=self.radius, fill=None)
         plt.gca().add_patch(circle)
 
-        
+
         if x != len(self.shape)-1:
           margin_next_layer = (max(self.shape)-self.shape[x+1])*0.5
           for y_n in range(self.shape[x+1]):
             plt.plot([x*self.horizontal_scale+self.radius,x*self.horizontal_scale+1-self.radius],[y+margin,y_n+margin_next_layer], linewidth=.8,c="0.6")
-        
+
     plt.axis('scaled')
     plt.axis('off')
     plt.show()
